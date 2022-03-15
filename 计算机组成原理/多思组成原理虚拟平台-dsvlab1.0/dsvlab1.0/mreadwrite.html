@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #Select1 {
+            width: 170px;
+            height: 23px;
+        }
+        #TextArea1 {
+            height: 441px;
+            width: 559px;
+        }
+        .auto-style1 {
+            width: 388px;
+        }
+        #Button1 {
+            width: 80px;
+        }
+        #Button2 {
+            width: 80px;
+        }
+    </style>
+
+
+    <script type='text/javascript'>
+
+        function select_list() {
+            var sel_num = 3;
+            var cAll = window.opener.mycircuit.componentAll;
+            var sel_list = document.getElementById("Select1");
+            for (var i = 0; i < cAll.length; i++) {
+                if (cAll[i].name == "RAM6116" || cAll[i].name == "EPROM2716C3" || cAll[i].name == "EPROM2716C4") {
+                    var option = window.document.createElement("option");
+                    sel_list.appendChild(option);
+                    option.text = cAll[i].name +" "+ cAll[i].id;
+                    option.value = cAll[i].id;
+                };
+            };
+        };
+
+        function mread() {
+            var sel_list = document.getElementById("Select1");
+            var texta = document.getElementById("TextArea1");
+            var cAll = window.opener.mycircuit.componentAll;
+            var text="";
+            var c,i,m,n;
+            for (i = 0 ; i < cAll.length; i++) {
+                c=cAll[i];
+                if (c.id ==sel_list.value) {
+                    for (m = 0; m < c.memory.length; m++) {
+                        for (n=c.memory[m].length-1; n >=0 ; n--) {
+                            text = text + String(c.memory[m][n]);
+                        };
+                        text = text + "\n";
+                    };
+                    texta.value = text;
+                    return;
+                };
+            };
+        };
+
+        function mwrite() {
+            var sel_list = document.getElementById("Select1");
+            var texta = document.getElementById("TextArea1");
+            var cAll = window.opener.mycircuit.componentAll;
+            var text = texta.value;
+            var c,i,m,n;
+            for (i = 0 ; i < cAll.length; i++) {
+                c = cAll[i];
+                var j = 0;
+                if (c.id == sel_list.value) {
+                    for (m = 0; m < c.memory.length; m++) {
+                        for (n = c.memory[m].length - 1; n >= 0; n--) {
+                            if (j > text.length - 1) {
+                                c.memory[m][n] = 0;
+                            } else {
+                                if (!(text[j] == "0" || text[j] == "1")) {
+                                    alert("write error! (" + m + "," + n + ")");
+                                    return;
+                                };
+                                c.memory[m][n] = Number(text[j]);
+                            };
+                            j=j+1;
+                        };
+                        j=j+1;
+                    };
+                    alert('write ok!');
+                    return;
+                };
+            };
+        };
+
+
+</script>
+
+</head>
+
+<body style="height: 525px;background-color:rgba(165, 189, 207, 0.10)" onload  ="select_list()" >
+    <p>&nbsp;</p>
+    <p style="height: 27px; color:#142256">           
+        请选择欲读写的存储器芯片：
+        <select id="Select1" name="D1" onchange="mread()">
+            <option></option>
+        </select>
+        读写需要较长时间，请耐心等待。
+    </p>
+    <div style="text-align: left">
+        <textarea id="TextArea1" name="S1" style="font-size:14px"></textarea>
+    </div>
+    <table style="width:100%; height: 41px;">
+        <tr>
+            <td  class="auto-style1">&nbsp;</td>
+            <td>
+                <input id="Button1" type="button" value="Write" onclick="mwrite(); window.close();"/> 
+                <input id="Button2" type="button" value="Cancle" onclick="window.close();"/></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+F:\c\C#\mine\mine\bin\Debug\mine.exe
+F:\c\C#\mine\mine\bin\Debug\mine.pdb
+F:\c\C#\mine\mine\obj\x86\Debug\mine.Form1.resources
+F:\c\C#\mine\mine\obj\x86\Debug\mine.Properties.Resources.resources
+F:\c\C#\mine\mine\obj\x86\Debug\mine.csproj.GenerateResource.Cache
+F:\c\C#\mine\mine\obj\x86\Debug\mine.exe
+F:\c\C#\mine\mine\obj\x86\Debug\mine.pdb
+F:\c\C#\mine\mine\obj\x86\Debug\mine.csprojResolveAssemblyReference.cache

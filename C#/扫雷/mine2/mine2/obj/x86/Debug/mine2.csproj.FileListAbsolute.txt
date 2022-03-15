@@ -1,0 +1,16 @@
+F:\c\C#\mine2\mine2\obj\x86\Debug\mine2.Form1.resources
+F:\c\C#\mine2\mine2\obj\x86\Debug\mine2.Properties.Resources.resources
+F:\c\C#\mine2\mine2\obj\x86\Debug\mine2.csproj.GenerateResource.Cache
+F:\c\C#\mine2\mine2\bin\Debug\mine2.exe
+F:\c\C#\mine2\mine2\bin\Debug\mine2.pdb
+F:\c\C#\mine2\mine2\obj\x86\Debug\mine2.exe
+F:\c\C#\mine2\mine2\obj\x86\Debug\mine2.pdb
+F:\c\C#\mine2\mine2\obj\x86\Debug\mine2.csprojResolveAssemblyReference.cache
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\obj\x86\Debug\mine2.exe
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\obj\x86\Debug\mine2.pdb
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\bin\Debug\mine2.exe
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\bin\Debug\mine2.pdb
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\obj\x86\Debug\mine2.csprojResolveAssemblyReference.cache
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\obj\x86\Debug\mine2.Form1.resources
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\obj\x86\Debug\mine2.Properties.Resources.resources
+C:\Users\qa\Desktop\三级项目\扫雷\mine2\mine2\obj\x86\Debug\mine2.csproj.GenerateResource.Cache

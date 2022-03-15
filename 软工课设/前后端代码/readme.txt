@@ -1,0 +1,3 @@
+xdkj_oa是前端项目，前端采用elementui框架
+xdkjoa是后端项目，后端采用springboot框架
+数据库采用阿里云的MySQL数据库

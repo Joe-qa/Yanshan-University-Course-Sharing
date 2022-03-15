@@ -1,0 +1,17 @@
+﻿  源.cpp
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(77): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(130): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(136): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(151): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(175): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(200): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(215): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(241): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(284): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(277): warning C4101: “end”: 未引用的局部变量
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(277): warning C4101: “beg”: 未引用的局部变量
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\arraywgraph.h(340): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\源.cpp(108): warning C4101: “first”: 未引用的局部变量
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\源.cpp(108): warning C4101: “last”: 未引用的局部变量
+c:\users\qa\desktop\数据结构三级项目\data structure\data structure\源.cpp(108): warning C4101: “theweight”: 未引用的局部变量
+  data structure.vcxproj -> C:\Users\qa\Desktop\数据结构三级项目\data structure\Debug\data structure.exe

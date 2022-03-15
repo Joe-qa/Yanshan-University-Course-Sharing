@@ -1,0 +1,17 @@
+C:\Users\qa\Desktop\三级项目\snake1\snake1\bin\Debug\snake1.exe
+C:\Users\qa\Desktop\三级项目\snake1\snake1\bin\Debug\snake1.pdb
+C:\Users\qa\Desktop\三级项目\snake1\snake1\obj\x86\Debug\snake1.Form1.resources
+C:\Users\qa\Desktop\三级项目\snake1\snake1\obj\x86\Debug\snake1.Properties.Resources.resources
+C:\Users\qa\Desktop\三级项目\snake1\snake1\obj\x86\Debug\snake1.csproj.GenerateResource.Cache
+C:\Users\qa\Desktop\三级项目\snake1\snake1\obj\x86\Debug\snake1.exe
+C:\Users\qa\Desktop\三级项目\snake1\snake1\obj\x86\Debug\snake1.pdb
+C:\Users\qa\Desktop\三级项目\snake1\snake1\obj\x86\Debug\snake1.csprojResolveAssemblyReference.cache
+G:\C#三级项目\snake1\snake1\bin\Debug\snake1.exe
+G:\C#三级项目\snake1\snake1\bin\Debug\snake1.pdb
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.csprojAssemblyReference.cache
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.Form1.resources
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.Properties.Resources.resources
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.csproj.GenerateResource.cache
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.csproj.CoreCompileInputs.cache
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.exe
+G:\C#三级项目\snake1\snake1\obj\x86\Debug\snake1.pdb

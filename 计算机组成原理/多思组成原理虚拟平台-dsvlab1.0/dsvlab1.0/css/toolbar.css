@@ -1,0 +1,10 @@
+﻿#power, #reset, #new, #tools {
+    border-style: solid;
+    border-color:white;
+    border-width: 1px;
+}
+
+#toolbar {
+    background:white;
+    height:36px;
+}

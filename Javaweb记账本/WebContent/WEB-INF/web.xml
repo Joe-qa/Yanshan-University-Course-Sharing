@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Kaptcha</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+	<servlet-name>kaptcha</servlet-name> 
+	<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class> 
+	<init-param>
+		<description>图片边框，合法值：yes，no</description>
+		<param-name>kaptcha.border</param-name>
+		<param-value>yes</param-value>
+	</init-param>
+	<!-- 图片宽度 -->
+        <init-param>
+            <param-name>kaptcha.image.width</param-name>
+            <param-value>135</param-value>
+        </init-param>
+<!-- 图片高度 -->
+        <init-param>
+            <param-name>kaptcha.image.height</param-name>
+            <param-value>50</param-value>
+        </init-param>
+        <!-- 使用哪些字符生成验证码 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.char.string</param-name>
+            <param-value>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345679
+            </param-value>
+        </init-param>
+        <!-- 字符个数 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.char.length</param-name>
+            <param-value>4</param-value>
+        </init-param>
+        <!-- 字体大小 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.size</param-name>
+            <param-value>43</param-value>
+        </init-param>
+        <!-- 干扰线的颜色 -->
+        <init-param>
+            <param-name>kaptcha.noise.color</param-name>
+            <param-value>yellow</param-value>
+        </init-param>
+        <!-- 使用哪些字体 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.names</param-name>
+            <param-value>Arial</param-value>
+        </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>kaptcha</servlet-name>
+  	<url-pattern>/randomcode.jpg</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" >
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=9" >
+
+		<title>多思计组原理虚拟实验室</title>
+<link rel="shortcut icon" href="dolphin.png" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/flowchart.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/jquery-ui.css" />   
+        <link rel="stylesheet" href="./css/toolbox.css" /> 
+        <link rel="stylesheet" href="./css/toolbar.css" /> 
+
+	    <script type='text/javascript' src='./js/lib/jquery.js'></script>
+        <script type='text/javascript' src='./js/lib/jqueryui1102.js'></script>
+       
+		<script type='text/javascript' src='./js/memu.js'></script>
+		<script type='text/javascript' src='./js/toolbar.js'></script>
+        <script type='text/javascript' src='./js/toolbox.js'></script>
+        <script type='text/javascript' src='./js/makedrag.js'></script>
+		<script type="text/javascript" src="./js/circuitdiagram.js"></script> 
+        <script type="text/javascript" src="./js/dispatch.js"></script> 
+        <script type="text/javascript" src="./js/fileoperation.js"></script> 
+        <script type='text/javascript' src='./js/component/74ls181.js'></script>
+        <script type='text/javascript' src='./js/component/74ls245.js'></script>
+        <script type='text/javascript' src='./js/component/74ls273.js'></script>
+        <script type='text/javascript' src='./js/component/led.js'></script>
+        <script type='text/javascript' src='./js/component/switch.js'></script>
+        <script type='text/javascript' src='./js/component/SinglePulse.js'></script>
+        <script type='text/javascript' src='./js/component/ContinuousPulse.js'></script>
+        <script type='text/javascript' src='./js/component/gateCircuit.js'></script>
+        <script type='text/javascript' src='./js/component/ram6116.js'></script>
+        <script type='text/javascript' src='./js/component/74ls174.js'></script>
+        <script type='text/javascript' src='./js/component/74ls175.js'></script>
+        <script type='text/javascript' src='./js/component/eprom2716c3.js'></script>
+        <script type='text/javascript' src='./js/component/eprom2716c4.js'></script>
+        <script type='text/javascript' src='./js/component/74ls139.js'></script>
+        <script type='text/javascript' src='./js/component/SequeTimer.js'></script>
+        <script type='text/javascript' src='./js/component/74ls374.js'></script>
+        <script type='text/javascript' src='./js/component/74ls163.js'></script>
+        <script type='text/javascript' src='./js/component/bus.js'></script>
+
+        <script type='text/javascript'>
+            $(window).load(function () {
+
+                document.onselectstart = function () {
+                    return false;
+                };
+                document.oncontextmenu = function () {
+                    return false;
+                };
+
+                //初始化菜单、工具栏和工具箱
+                menuInit();
+                toolbarInit();
+                mytoolbox = new toolbox();
+
+                mycircuit = new Circuit();
+                cDispatch = new Dispatch(mycircuit);
+            });
+        </script>
+
+	</head>
+
+	<body>
+
+		<div id="menu">
+            <ul id="navmenu"> 
+            <li><a href="#">文件</a> 
+                <ul>
+                    <li><a href="#" id="newfile">新建</a></li>
+                    <li><a href="#" id="opener">打开</a></li>
+                    <li><a href="#" id="saver">保存</a></li>
+                </ul>
+            </li>
+            <li><a href="#">运行</a> 
+                <ul>
+                    <li><a href="#" id="poweron">开电源</a></li>
+                    <li><a href="#" id="poweroff">关电源</a></li>
+                    <li><a href="#" id="powerreset">重启</a></li>
+                </ul>
+            </li>
+            <li><a href="#">工具</a> 
+                <ul> 
+                <li><a href="#" onclick="window.open('mreadwrite.html')">存储器芯片设置</a></li>
+                <li><a href="#" onclick="window.open('colorpicker.html')">连接线颜色设置</a></li>     
+                <li><a href="#" id="clockcycle">时钟周期设置</a></li> 
+                </ul> 
+            </li>
+            <li><a href="#">实验指导</a> 
+                <ul> 
+                <li><a href="#" onclick="window.open('experimentguidance.html')" >实验指导书</a> 
+                </li> 
+                <li><a href="#" onclick="window.open('chipdatasheet.html')" >实验器件资料</a>
+                </li>
+                </ul> 
+            </li> 
+            <li><a href="#">帮助</a> 
+                <ul> 
+                <li><a href="./files/help.pdf"  target="_blank">查看帮助</a></li>
+                <li><a href="#"  id="about">关于虚拟实验室</a></li>
+                </ul> 
+            </li>
+            </ul>
+        </div>
+
+        <div id="toolbar">
+            <img id="power" src="./img/poweroff.png" alt="power" />
+            <img id="reset" src="./img/reset.png" alt="reset" />
+            <img id="new" src="./img/new.png" alt="new" />
+            <img id="tools" src="./img/tools.png" alt="tools" />
+        </div>
+
+        <div id="toolbox"  class="toolbox">
+            <h1 class="ui-widget-header">实验设备列表</h1>
+            <div id="accordion-resizer" class="ui-widget-content">    
+            <div id="accordion">              
+                <h3>数字功能器件</h3>        
+                <div>            
+                    <ul>                
+                        <li class ="tooltip">74LS181</li>                
+                        <li class ="tooltip">74LS245</li>
+                        <li class ="tooltip">74LS175</li>
+                        <li class ="tooltip">74LS174</li>                
+                        <li class ="tooltip">74LS273</li>
+                        <li class ="tooltip">RAM6116</li>
+                        <li class ="tooltip">74LS139</li>
+                        <li class ="tooltip">74LS374</li>
+                        <li class ="tooltip">74LS163</li>
+                    </ul>       
+                </div>        
+                <h3>逻辑门电路</h3>        
+                <div>       
+                    <ul>                
+                        <li class ="tooltip">ANDgate</li>                
+                        <li class ="tooltip">ORgate</li>                
+                        <li class ="tooltip">NOTgate</li>
+                        <li class ="tooltip">NANDgate</li>  
+                        <li class ="tooltip">XORgate</li>   
+                        <li class ="tooltip">Triplegate</li>                            
+                    </ul>    
+                </div>  
+                <h3>基本元件</h3>        
+                <div>                       
+                    <ul>                
+                        <li class ="tooltip">Switch</li>                
+                        <li class ="tooltip">Led</li>                
+                        <li class ="tooltip">SinglePulse</li>   
+                        <li class ="tooltip">ContinuousPulse</li>                                  
+                    </ul>        
+                </div>        
+                <h3>虚拟组件</h3>        
+                <div>                       
+                    <ul>                
+                        <li class ="tooltip">EPROM2716C3</li>    
+                        <li class ="tooltip">EPROM2716C4</li>            
+                        <li class ="tooltip">SequeTimer</li>
+                        <li class ="tooltip">BUS</li>                     
+                    </ul>        
+                </div>                    
+            </div>
+            </div>  
+        </div>	  
+		<div id="demo"></div>
+
+        <div id="dialog" title="Pin Value"></div>
+
+        <div id="clockdlg" title="Clock Cycle">
+            <br />
+            <br />
+            <div id="clocksld"></div>
+        </div>
+
+        <div id="aboutdlg" title="About DS-VLAB">
+             <TABLE><TBODY><TR><TD><DIV id=c1><img src="./img/dolphin150.png" height="80" width="80" /></DIV></TD><TD><DIV id=c2><p style = "line-height:0.5;font-size:18px">多思计算机组成原理网络虚拟实验系统</p><p style = "line-height:0.5;font-size:18px">DS-VLAB v1.0</p></DIV></TD><TD></table>
+             <p style = "line-height:0">Copyright(C)2013 ZHANG Wen-fen  张雯雰 </p>
+             <p style = "line-height:1.2">作者：湘南学院软件与通信工程学院张雯雰老师</p>
+             <p style = "line-height:1.2">Email：yydzhwf@163.com</p>
+             <p>本程序为自由软件；您可依据自由软件基金会所发表的GNU GENERAL PUBLIC LICENSE，对本程序再次发布和/或修改。</p>
+             <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.</p>
+        </div>
+
+
+	</body>
+</html>

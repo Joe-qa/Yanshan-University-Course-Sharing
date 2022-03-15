@@ -1,0 +1,10 @@
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\bin\Debug\PageReplace.exe.config
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\bin\Debug\PageReplace.exe
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\bin\Debug\PageReplace.pdb
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.csprojAssemblyReference.cache
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.Form1.resources
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.Properties.Resources.resources
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.csproj.GenerateResource.cache
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.csproj.CoreCompileInputs.cache
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.exe
+F:\操作系统\操作系统课程设计\PageReplace\PageReplace\obj\Debug\PageReplace.pdb
